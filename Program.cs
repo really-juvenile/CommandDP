@@ -9,11 +9,13 @@
             ICommand onCommand = new OnCommand(tv);
             ICommand offCommand = new OffCommand(tv);
 
-            RemoteControl remoteControl1 = new RemoteControl(onCommand);
-            RemoteControl remoteControl2 = new RemoteControl(offCommand);
+            RemoteControl remoteControl1 = new RemoteControl();
+
+            remoteControl1.SetCommand(onCommand);
+            remoteControl1.SetCommand(offCommand);
 
             remoteControl1.PressButton();
-            remoteControl2.PressButton();
+            remoteControl1.PressButton();
         }
     }
 }

@@ -10,13 +10,16 @@ namespace CommandDP
     {
         public ICommand Command { get; set; }
 
-        public RemoteControl(ICommand command)
+        public RemoteControl()
         {
-            Command = command;
+            
         }
 
 
-
+        public void SetCommand(ICommand command)
+        {
+            Command = command;
+        }
         public void PressButton()
         {
             Command.Execute();
